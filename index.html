@@ -14,10 +14,10 @@
                 <input id="display" type="text" readonly>
             </div>
             <div class="row-one">
-                <button id="clear" onclick="clearDisplay()">C</button>
-                <button id="negate">+/-</button>
-                <button id="percent">%</button>
-                <button id="divide">/</button>
+                <button id="operator" onclick="clearDisplay()">C</button>
+                <button id="operator" onclick="backspace()">DE</button>
+                <button id="operator">%</button>
+                <button id="operator" onclick="getOperator('/')">/</button>
             </div>
             <div class="row-two">
                 <button id="seven" onclick="appendToDisplay(7)">7</button>
@@ -29,7 +29,7 @@
                 <button id="four" onclick="appendToDisplay(4)">4</button>
                 <button id="five" onclick="appendToDisplay(5)">5</button>
                 <button id="six" onclick="appendToDisplay(6)">6</button>
-                <button id="minus" onclick="getOperator('-')">-</button>
+                <button id="operator" onclick="getOperator('-')">-</button>
             </div>
             <div class="row-four">
                 <button id="one" onclick="appendToDisplay(1)">1</button>
@@ -39,7 +39,7 @@
             </div>
             <div class="row-five">
                 <button id="zero" onclick="appendToDisplay(0)">0</button>
-                <button id="decimal">.</button>
+                <button id="decimal" onclick="appendToDisplay('.')">.</button>
                 <button id="operator" onclick="calculate()">=</button>
             </div>
         </div>

@@ -21,6 +21,10 @@ function clearDisplay() {
     operator = null;
 }
 
+function backspace() {
+    display.value = display.value.substr(0, display.value.length - 1);
+}
+
 function add(num1, num2) {
     return num1 + num2;
 }
@@ -57,10 +61,11 @@ function calculate() {
     else if(operator === '-'){
         display.value = subtract(operandOne,operandTwo);
     }
-    else if(operator === '*'){
-        display.value = multiply(operandOne,operandTwo);
+    else if(operator === '/'){
+        display.value = divide(operandOne,operandTwo);
     }
 
     operandOne = display.value;
     operandTwo = 0;
+    operator = null;
 }

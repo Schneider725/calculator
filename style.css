@@ -9,6 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    background-color: rgb(236, 221, 193);
 }
 button {
     background-color: rgb(106, 103, 103);
@@ -34,7 +35,7 @@ button {
     padding: 20px;
     font-size: xx-large;
     border-radius: 10%;
-    background-color: rgb(99, 98, 98);
+    background-color: rgb(128, 126, 126);
     color:white;
     font-weight: bolder;
     text-align: right;
@@ -63,6 +64,10 @@ button {
     color: white;
 }
 
+#operator {
+    background-color: #ff7300
+    ;
+}
 #zero {
     flex: 6;
 }
