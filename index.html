@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="buttons">
+            <div class="row-zero">
+                <input id="display" type="text" readonly>
+            </div>
+            <div class="row-one">
+                <button id="clear" onclick="clearDisplay()">C</button>
+                <button id="negate">+/-</button>
+                <button id="percent">%</button>
+                <button id="divide">/</button>
+            </div>
+            <div class="row-two">
+                <button id="seven" onclick="appendToDisplay(7)">7</button>
+                <button id="eight" onclick="appendToDisplay(8)">8</button>
+                <button id="nine" onclick="appendToDisplay(9)">9</button>
+                <button id="operator" onclick="getOperator('*')">*</button>
+            </div>
+            <div class="row-three">
+                <button id="four" onclick="appendToDisplay(4)">4</button>
+                <button id="five" onclick="appendToDisplay(5)">5</button>
+                <button id="six" onclick="appendToDisplay(6)">6</button>
+                <button id="minus" onclick="getOperator('-')">-</button>
+            </div>
+            <div class="row-four">
+                <button id="one" onclick="appendToDisplay(1)">1</button>
+                <button id="two" onclick="appendToDisplay(2)">2</button>
+                <button id="three" onclick="appendToDisplay(3)">3</button>
+                <button id="operator" onclick="getOperator('+')">+</button>
+            </div>
+            <div class="row-five">
+                <button id="zero" onclick="appendToDisplay(0)">0</button>
+                <button id="decimal">.</button>
+                <button id="operator" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
