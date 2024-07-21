@@ -4,6 +4,7 @@ let operandOne = 0;
 let operandTwo = null;
 let operator = null;
 let flag = true;
+let cont = false;
 
 function appendToDisplay(input) {
     if(flag  === false) {
@@ -15,6 +16,9 @@ function appendToDisplay(input) {
 
 function clearDisplay() {
     display.value = "";
+    operandOne = 0;
+    operandTwo = null;
+    operator = null;
 }
 
 function add(num1, num2) {
@@ -34,13 +38,12 @@ function divide(num1,num2) {
 }
 
 function getOperator(clicked) {
+    if(operator != null && flag === true) {
+        calculate();
+    }
     operator = clicked;
     operandOne = parseInt(display.value);
     flag = false;
-
-    if(operator != null && operandOne != null && operandTwo != null) {
-        calculate();
-    }
 }
 
 function calculate() {
@@ -59,5 +62,5 @@ function calculate() {
     }
 
     operandOne = display.value;
-    operandTwo = null;
+    operandTwo = 0;
 }
